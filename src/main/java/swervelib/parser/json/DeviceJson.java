@@ -81,6 +81,10 @@ public class DeviceJson
         return new SparkMaxAnalogEncoderSwerve(motor, 3.3);
       case "sparkmax_analog5v":
         return new SparkMaxAnalogEncoderSwerve(motor, 5);
+      // TODO - other cases included at https://github.com/konnorreynolds/YAGSL-Example-Edit/commit/7e8df72eced523521cb4c4ced0929532a7760e84
+      // TODO - but I don't know what they mean
+      case  "sparkflex_attached": 
+        return new SparkMaxAnalogEncoderSwerve(motor, 360); // TODO - I think 360 is correct but it could be 1
       case "canandcoder_can":
       case "canandmag_can":
         return new CanAndMagSwerve(id);

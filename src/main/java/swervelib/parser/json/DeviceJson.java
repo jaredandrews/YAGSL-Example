@@ -13,6 +13,7 @@ import swervelib.encoders.AnalogAbsoluteEncoderSwerve;
 import swervelib.encoders.CANCoderSwerve;
 import swervelib.encoders.CanAndMagSwerve;
 import swervelib.encoders.PWMDutyCycleEncoderSwerve;
+import swervelib.encoders.SparkFlexEncoderSwerve;
 import swervelib.encoders.SparkMaxAnalogEncoderSwerve;
 import swervelib.encoders.SparkMaxEncoderSwerve;
 import swervelib.encoders.SwerveAbsoluteEncoder;
@@ -84,7 +85,7 @@ public class DeviceJson
       // TODO - other cases included at https://github.com/konnorreynolds/YAGSL-Example-Edit/commit/7e8df72eced523521cb4c4ced0929532a7760e84
       // TODO - but I don't know what they mean
       case  "sparkflex_attached": 
-        return new SparkMaxAnalogEncoderSwerve(motor, 360); // TODO - I think 360 is correct but it could be 1
+        return new SparkFlexEncoderSwerve(motor, 360); // TODO - I think 360 is correct but it could be 1
       case "canandcoder_can":
       case "canandmag_can":
         return new CanAndMagSwerve(id);
